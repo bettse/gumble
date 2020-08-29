@@ -10,7 +10,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"layeh.com/gumble/gumble"
+	"github.com/bettse/gumble/gumble"
 )
 
 // State represents the state of a Stream.

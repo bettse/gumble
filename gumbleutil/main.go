@@ -8,7 +8,7 @@ import (
 	"os"
 	"strconv"
 
-	"layeh.com/gumble/gumble"
+	"github.com/bettse/gumble/gumble"
 )
 
 // Main aids in the creation of a basic command line gumble bot. It accepts the

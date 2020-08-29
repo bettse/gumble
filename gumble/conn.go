@@ -9,8 +9,8 @@ import (
 	"time"
 
 	"github.com/golang/protobuf/proto"
-	"layeh.com/gumble/gumble/MumbleProto"
-	"layeh.com/gumble/gumble/varint"
+	"github.com/bettse/gumble/gumble/MumbleProto"
+	"github.com/bettse/gumble/gumble/varint"
 )
 
 // DefaultPort is the default port on which Mumble servers listen.
