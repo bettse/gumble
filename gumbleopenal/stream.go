@@ -5,8 +5,8 @@ import (
 	"errors"
 	"time"
 
-	"github.com/dchote/go-openal/openal"
 	"github.com/bettse/gumble/gumble"
+	"github.com/dchote/go-openal/openal"
 )
 
 var (
@@ -74,6 +74,14 @@ func (s *Stream) StopSource() error {
 	close(s.sourceStop)
 	s.sourceStop = nil
 	s.deviceSource.CaptureStop()
+
+	time.Sleep(100 * time.Millisecond)
+
+	s.deviceSource.CaptureCloseDevice()
+	s.deviceSource = nil
+
+	s.deviceSource = openal.CaptureOpenDevice("", gumble.AudioSampleRate, openal.FormatMono16, uint32(s.sourceFrameSize))
+
 	return nil
 }
 
